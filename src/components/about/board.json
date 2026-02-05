@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_boards",
+  "info": {
+    "displayName": "Board"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "boards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::board.board"
+    }
+  },
+  "config": {}
+}

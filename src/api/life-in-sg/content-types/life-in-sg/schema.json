@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "life_in_sgs",
+  "info": {
+    "singularName": "life-in-sg",
+    "pluralName": "life-in-sgs",
+    "displayName": "Life In SG Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "shared.section",
+      "repeatable": false
+    },
+    "bannerAds": {
+      "type": "component",
+      "component": "shared.banner-ads",
+      "repeatable": true
+    }
+  }
+}

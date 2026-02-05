@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_impacts",
+  "info": {
+    "displayName": "Impact"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "impactDetail": {
+      "type": "component",
+      "component": "home.impact-detail",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

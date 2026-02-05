@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "donation_pages",
+  "info": {
+    "singularName": "donation-page",
+    "pluralName": "donation-pages",
+    "displayName": "Donation Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "home.section",
+      "repeatable": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

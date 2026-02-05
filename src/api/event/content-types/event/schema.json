@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "shared.section",
+      "repeatable": false
+    },
+    "review": {
+      "type": "component",
+      "component": "shared.review",
+      "repeatable": false
+    },
+    "banner": {
+      "type": "component",
+      "component": "shared.banner",
+      "repeatable": true
+    },
+    "bannerAds": {
+      "type": "component",
+      "component": "shared.banner-ads",
+      "repeatable": true
+    }
+  }
+}

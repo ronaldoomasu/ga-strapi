@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms_conditions",
+  "info": {
+    "singularName": "term-condition",
+    "pluralName": "terms-conditions",
+    "displayName": "Terms Conditions Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "termsConditions": {
+      "type": "component",
+      "component": "shared.label-detail",
+      "repeatable": true
+    }
+  }
+}

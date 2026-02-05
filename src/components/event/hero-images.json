@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_event_hero_images",
+  "info": {
+    "displayName": "Hero Images"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

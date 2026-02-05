@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "corporate_membership_pages",
+  "info": {
+    "singularName": "corporate-membership-page",
+    "pluralName": "corporate-membership-pages",
+    "displayName": "Corporate Membership Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "home.section",
+      "repeatable": false
+    },
+    "premiumPartner": {
+      "type": "component",
+      "component": "home.partner",
+      "repeatable": false
+    },
+    "partner": {
+      "type": "component",
+      "component": "home.partner",
+      "repeatable": false
+    }
+  }
+}

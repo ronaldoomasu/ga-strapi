@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "past_event_detail_pages",
+  "info": {
+    "singularName": "past-event-detail-page",
+    "pluralName": "past-event-detail-pages",
+    "displayName": "Past Event Detail Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "shared.banner",
+      "repeatable": false
+    },
+    "bannerAds": {
+      "type": "component",
+      "component": "shared.banner-ads",
+      "repeatable": true
+    }
+  }
+}

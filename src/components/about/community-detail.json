@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_community_details",
+  "info": {
+    "displayName": "Community Detail"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

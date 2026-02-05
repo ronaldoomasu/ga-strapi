@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "article_detail_pages",
+  "info": {
+    "singularName": "article-detail-page",
+    "pluralName": "article-detail-pages",
+    "displayName": "Article Detail Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "shared.banner",
+      "repeatable": false
+    },
+    "bannerAds": {
+      "type": "component",
+      "component": "shared.banner-ads",
+      "repeatable": true
+    }
+  }
+}

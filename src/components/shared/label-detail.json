@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_label_details",
+  "info": {
+    "displayName": "LabelDetail"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

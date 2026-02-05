@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_volunteer_volunteers",
+  "info": {
+    "displayName": "Volunteer"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "cta": {
+      "type": "string"
+    },
+    "textButton": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_communities",
+  "info": {
+    "displayName": "Community"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "communityDetail": {
+      "type": "component",
+      "component": "about.community-detail",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

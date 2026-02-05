@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_hero_images",
+  "info": {
+    "displayName": "Hero Images"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

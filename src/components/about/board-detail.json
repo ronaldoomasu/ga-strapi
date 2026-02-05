@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_about_board_details",
+  "info": {
+    "displayName": "Board Detail"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

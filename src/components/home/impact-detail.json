@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_impact_details",
+  "info": {
+    "displayName": "Impact Detail"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "impact": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

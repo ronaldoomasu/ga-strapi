@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "upcoming_event_detail_pages",
+  "info": {
+    "singularName": "upcoming-event-detail-page",
+    "pluralName": "upcoming-event-detail-pages",
+    "displayName": "Upcoming Event Detail Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "shared.banner",
+      "repeatable": false
+    }
+  }
+}

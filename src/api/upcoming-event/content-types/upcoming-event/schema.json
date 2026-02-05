@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "upcoming_events",
+  "info": {
+    "singularName": "upcoming-event",
+    "pluralName": "upcoming-events",
+    "displayName": "Upcoming Event Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroImages": {
+      "type": "component",
+      "component": "event.hero-images",
+      "repeatable": false
+    },
+    "banner": {
+      "type": "component",
+      "component": "shared.banner",
+      "repeatable": false
+    }
+  }
+}

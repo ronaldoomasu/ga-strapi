@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "volunteer_pages",
+  "info": {
+    "singularName": "volunteer-page",
+    "pluralName": "volunteer-pages",
+    "displayName": "Volunteer Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "about.section",
+      "repeatable": false
+    },
+    "review": {
+      "type": "component",
+      "component": "shared.review",
+      "repeatable": false
+    },
+    "volunteer": {
+      "type": "component",
+      "component": "volunteer.volunteer",
+      "repeatable": true
+    }
+  }
+}
