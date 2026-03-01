@@ -20,6 +20,11 @@
       "type": "component",
       "component": "shared.banner-ads",
       "repeatable": true
+    },
+    "pastEventComponent": {
+      "type": "component",
+      "component": "event.event-component",
+      "repeatable": false
     }
   }
 }

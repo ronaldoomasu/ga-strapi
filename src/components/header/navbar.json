@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_header_navbars",
+  "info": {
+    "displayName": "Navbar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "titleCTA": {
+      "type": "string"
+    },
+    "dropdown": {
+      "type": "component",
+      "component": "header.navbar-items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

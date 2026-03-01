@@ -57,6 +57,17 @@ export interface AboutSection extends Struct.ComponentSchema {
   };
 }
 
+export interface EventEventComponent extends Struct.ComponentSchema {
+  collectionName: 'components_event_event_components';
+  info: {
+    displayName: 'Event Component';
+  };
+  attributes: {
+    eventTitle: Schema.Attribute.String;
+    readMoreText: Schema.Attribute.String;
+  };
+}
+
 export interface EventHeroImages extends Struct.ComponentSchema {
   collectionName: 'components_event_hero_images';
   info: {
@@ -66,6 +77,77 @@ export interface EventHeroImages extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface FooterApps extends Struct.ComponentSchema {
+  collectionName: 'components_footer_apps';
+  info: {
+    displayName: 'Apps';
+  };
+  attributes: {
+    appleApp: Schema.Attribute.Media<'images'>;
+    appleCTA: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    googleApp: Schema.Attribute.Media<'images'>;
+    googleCTA: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FooterPage extends Struct.ComponentSchema {
+  collectionName: 'components_footer_pages';
+  info: {
+    displayName: 'Page';
+  };
+  attributes: {
+    pageItems: Schema.Attribute.Component<'footer.page-items', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FooterPageItems extends Struct.ComponentSchema {
+  collectionName: 'components_footer_page_items';
+  info: {
+    displayName: 'Page Items';
+  };
+  attributes: {
+    pageCTA: Schema.Attribute.String;
+    pageText: Schema.Attribute.String;
+  };
+}
+
+export interface FooterSocialMedia extends Struct.ComponentSchema {
+  collectionName: 'components_footer_social_medias';
+  info: {
+    displayName: 'Social Media';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    imageCTA: Schema.Attribute.String;
+  };
+}
+
+export interface HeaderNavbar extends Struct.ComponentSchema {
+  collectionName: 'components_header_navbars';
+  info: {
+    displayName: 'Navbar';
+  };
+  attributes: {
+    dropdown: Schema.Attribute.Component<'header.navbar-items', true>;
+    title: Schema.Attribute.String;
+    titleCTA: Schema.Attribute.String;
+  };
+}
+
+export interface HeaderNavbarItems extends Struct.ComponentSchema {
+  collectionName: 'components_header_navbar_items';
+  info: {
+    displayName: 'Navbar Items';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    textCTA: Schema.Attribute.String;
   };
 }
 
@@ -122,7 +204,7 @@ export interface HomePartner extends Struct.ComponentSchema {
     displayName: 'Partner';
   };
   attributes: {
-    logos: Schema.Attribute.Media<'images', true>;
+    partners: Schema.Attribute.Component<'logo.partner', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -138,6 +220,17 @@ export interface HomeSection extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     textButton: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface LogoPartner extends Struct.ComponentSchema {
+  collectionName: 'components_logo_partners';
+  info: {
+    displayName: 'Partner';
+  };
+  attributes: {
+    logo: Schema.Attribute.Media<'images'>;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -221,13 +314,21 @@ declare module '@strapi/strapi' {
       'about.community': AboutCommunity;
       'about.community-detail': AboutCommunityDetail;
       'about.section': AboutSection;
+      'event.event-component': EventEventComponent;
       'event.hero-images': EventHeroImages;
+      'footer.apps': FooterApps;
+      'footer.page': FooterPage;
+      'footer.page-items': FooterPageItems;
+      'footer.social-media': FooterSocialMedia;
+      'header.navbar': HeaderNavbar;
+      'header.navbar-items': HeaderNavbarItems;
       'home.banner': HomeBanner;
       'home.hero-images': HomeHeroImages;
       'home.impact': HomeImpact;
       'home.impact-detail': HomeImpactDetail;
       'home.partner': HomePartner;
       'home.section': HomeSection;
+      'logo.partner': LogoPartner;
       'shared.banner': SharedBanner;
       'shared.banner-ads': SharedBannerAds;
       'shared.label-detail': SharedLabelDetail;

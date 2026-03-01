@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "headers",
+  "info": {
+    "singularName": "header",
+    "pluralName": "headers",
+    "displayName": "Header"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "navbar": {
+      "type": "component",
+      "component": "header.navbar",
+      "repeatable": true
+    },
+    "signInButton": {
+      "type": "string"
+    },
+    "joinButton": {
+      "type": "string"
+    }
+  }
+}

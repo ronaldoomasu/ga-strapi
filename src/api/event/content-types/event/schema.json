@@ -30,6 +30,16 @@
       "type": "component",
       "component": "shared.banner-ads",
       "repeatable": true
+    },
+    "eventComponent": {
+      "type": "component",
+      "component": "event.event-component",
+      "repeatable": false
+    },
+    "pastEventComponent": {
+      "type": "component",
+      "component": "event.event-component",
+      "repeatable": false
     }
   }
 }

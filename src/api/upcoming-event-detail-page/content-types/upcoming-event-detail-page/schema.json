@@ -15,6 +15,11 @@
       "type": "component",
       "component": "shared.banner",
       "repeatable": false
+    },
+    "upcomingEventComponent": {
+      "type": "component",
+      "component": "event.event-component",
+      "repeatable": false
     }
   }
 }

@@ -26,6 +26,14 @@
       "component": "home.impact",
       "repeatable": false
     },
+    "eventComponent": {
+      "type": "component",
+      "component": "event.event-component",
+      "repeatable": false
+    },
+    "categoriesTitle": {
+      "type": "string"
+    },
     "secondSection": {
       "type": "component",
       "component": "home.section",

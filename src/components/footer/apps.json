@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_footer_apps",
+  "info": {
+    "displayName": "Apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "googleApp": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "googleCTA": {
+      "type": "string"
+    },
+    "appleApp": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "appleCTA": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

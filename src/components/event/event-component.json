@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_event_event_components",
+  "info": {
+    "displayName": "Event Component"
+  },
+  "options": {},
+  "attributes": {
+    "eventTitle": {
+      "type": "string"
+    },
+    "readMoreText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -20,6 +20,9 @@
       "type": "component",
       "component": "shared.banner-ads",
       "repeatable": true
+    },
+    "searchPlaceholder": {
+      "type": "string"
     }
   }
 }

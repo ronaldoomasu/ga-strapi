@@ -1,16 +1,16 @@
 {
-  "collectionName": "components_home_partners",
+  "collectionName": "components_footer_pages",
   "info": {
-    "displayName": "Partner"
+    "displayName": "Page"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "partners": {
+    "pageItems": {
       "type": "component",
-      "component": "logo.partner",
+      "component": "footer.page-items",
       "repeatable": true
     }
   },

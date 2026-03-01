@@ -20,6 +20,12 @@
       "type": "component",
       "component": "shared.banner-ads",
       "repeatable": true
+    },
+    "categoriesTitle": {
+      "type": "string"
+    },
+    "articleTitle": {
+      "type": "string"
     }
   }
 }

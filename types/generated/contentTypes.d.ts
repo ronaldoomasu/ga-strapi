@@ -523,6 +523,7 @@ export interface ApiArticleDetailPageArticleDetailPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    searchPlaceholder: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -540,6 +541,7 @@ export interface ApiArticlePageArticlePage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articleTitle: Schema.Attribute.String;
     banner: Schema.Attribute.Component<'shared.banner', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -551,6 +553,7 @@ export interface ApiArticlePageArticlePage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    searchPlaceholder: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -569,7 +572,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    ads: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
@@ -767,12 +769,80 @@ export interface ApiEventEvent extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    eventComponent: Schema.Attribute.Component<'event.event-component', false>;
     hero: Schema.Attribute.Component<'shared.section', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
       Schema.Attribute.Private;
+    pastEventComponent: Schema.Attribute.Component<
+      'event.event-component',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     review: Schema.Attribute.Component<'shared.review', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
+  info: {
+    displayName: 'Footer';
+    pluralName: 'footers';
+    singularName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appSection: Schema.Attribute.Component<'footer.apps', false>;
+    copyright: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer.footer'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'>;
+    pages: Schema.Attribute.Component<'footer.page', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    socialMedias: Schema.Attribute.Component<'footer.social-media', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
+  collectionName: 'headers';
+  info: {
+    displayName: 'Header';
+    pluralName: 'headers';
+    singularName: 'header';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    joinButton: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::header.header'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'>;
+    navbar: Schema.Attribute.Component<'header.navbar', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    signInButton: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -791,9 +861,11 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Component<'shared.banner', true>;
+    categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    eventComponent: Schema.Attribute.Component<'event.event-component', false>;
     firstSection: Schema.Attribute.Component<'home.section', false>;
     heroImages: Schema.Attribute.Component<'home.hero-images', true>;
     impact: Schema.Attribute.Component<'home.impact', false>;
@@ -821,8 +893,10 @@ export interface ApiImpulsInsightImpulsInsight extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articleTitle: Schema.Attribute.String;
     banner: Schema.Attribute.Component<'shared.banner', false>;
     bannerAds: Schema.Attribute.Component<'shared.banner-ads', true>;
+    categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -851,7 +925,9 @@ export interface ApiLifeInSgLifeInSg extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articleTitle: Schema.Attribute.String;
     bannerAds: Schema.Attribute.Component<'shared.banner-ads', true>;
+    categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -923,6 +999,10 @@ export interface ApiPastEventDetailPagePastEventDetailPage
       'api::past-event-detail-page.past-event-detail-page'
     > &
       Schema.Attribute.Private;
+    pastEventComponent: Schema.Attribute.Component<
+      'event.event-component',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1167,6 +1247,10 @@ export interface ApiUpcomingEventDetailPageUpcomingEventDetailPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    upcomingEventComponent: Schema.Attribute.Component<
+      'event.event-component',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1185,9 +1269,11 @@ export interface ApiUpcomingEventUpcomingEvent extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Component<'shared.banner', false>;
+    calendarTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    eventTitle: Schema.Attribute.String;
     heroImages: Schema.Attribute.Component<'event.hero-images', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1753,6 +1839,8 @@ declare module '@strapi/strapi' {
       'api::corporate-membership-page.corporate-membership-page': ApiCorporateMembershipPageCorporateMembershipPage;
       'api::donation-page.donation-page': ApiDonationPageDonationPage;
       'api::event.event': ApiEventEvent;
+      'api::footer.footer': ApiFooterFooter;
+      'api::header.header': ApiHeaderHeader;
       'api::home.home': ApiHomeHome;
       'api::impuls-insight.impuls-insight': ApiImpulsInsightImpulsInsight;
       'api::life-in-sg.life-in-sg': ApiLifeInSgLifeInSg;
