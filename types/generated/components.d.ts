@@ -128,6 +128,20 @@ export interface FooterSocialMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface HeaderCategoryNavbar extends Struct.ComponentSchema {
+  collectionName: 'components_header_category_navbars';
+  info: {
+    displayName: 'Category Navbar';
+  };
+  attributes: {
+    categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HeaderNavbar extends Struct.ComponentSchema {
   collectionName: 'components_header_navbars';
   info: {
@@ -320,6 +334,7 @@ declare module '@strapi/strapi' {
       'footer.page': FooterPage;
       'footer.page-items': FooterPageItems;
       'footer.social-media': FooterSocialMedia;
+      'header.category-navbar': HeaderCategoryNavbar;
       'header.navbar': HeaderNavbar;
       'header.navbar-items': HeaderNavbarItems;
       'home.banner': HomeBanner;

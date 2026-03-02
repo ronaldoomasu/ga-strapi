@@ -18,6 +18,11 @@
         "images"
       ]
     },
+    "categoryNavbar": {
+      "type": "component",
+      "component": "header.category-navbar",
+      "repeatable": false
+    },
     "navbar": {
       "type": "component",
       "component": "header.navbar",

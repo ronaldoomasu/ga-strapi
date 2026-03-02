@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_header_category_navbars",
+  "info": {
+    "displayName": "Category Navbar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  },
+  "config": {}
+}
