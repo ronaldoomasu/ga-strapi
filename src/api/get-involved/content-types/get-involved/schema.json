@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "get_involveds",
+  "info": {
+    "singularName": "get-involved",
+    "pluralName": "get-involveds",
+    "displayName": "Get Involved Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "membership": {
+      "type": "component",
+      "component": "get-involved.involve-component",
+      "repeatable": false
+    },
+    "volunteer": {
+      "type": "component",
+      "component": "get-involved.involve-component",
+      "repeatable": false
+    },
+    "corporate": {
+      "type": "component",
+      "component": "get-involved.involve-component",
+      "repeatable": false
+    },
+    "donation": {
+      "type": "component",
+      "component": "get-involved.involve-component",
+      "repeatable": false
+    }
+  }
+}

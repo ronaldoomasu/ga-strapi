@@ -818,6 +818,51 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiGetInvolvedGetInvolved extends Struct.SingleTypeSchema {
+  collectionName: 'get_involveds';
+  info: {
+    displayName: 'Get Involved Page';
+    pluralName: 'get-involveds';
+    singularName: 'get-involved';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    corporate: Schema.Attribute.Component<
+      'get-involved.involve-component',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    donation: Schema.Attribute.Component<
+      'get-involved.involve-component',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::get-involved.get-involved'
+    > &
+      Schema.Attribute.Private;
+    membership: Schema.Attribute.Component<
+      'get-involved.involve-component',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    volunteer: Schema.Attribute.Component<
+      'get-involved.involve-component',
+      false
+    >;
+  };
+}
+
 export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
   collectionName: 'headers';
   info: {
@@ -1841,6 +1886,7 @@ declare module '@strapi/strapi' {
       'api::donation-page.donation-page': ApiDonationPageDonationPage;
       'api::event.event': ApiEventEvent;
       'api::footer.footer': ApiFooterFooter;
+      'api::get-involved.get-involved': ApiGetInvolvedGetInvolved;
       'api::header.header': ApiHeaderHeader;
       'api::home.home': ApiHomeHome;
       'api::impuls-insight.impuls-insight': ApiImpulsInsightImpulsInsight;

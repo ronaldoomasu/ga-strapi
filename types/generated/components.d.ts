@@ -128,6 +128,22 @@ export interface FooterSocialMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface GetInvolvedInvolveComponent extends Struct.ComponentSchema {
+  collectionName: 'components_get_involved_involve_components';
+  info: {
+    displayName: 'Involve Component';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    detailBtnCTA: Schema.Attribute.String;
+    detailBtnText: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    joinBtnCTA: Schema.Attribute.String;
+    joinBtnText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HeaderCategoryNavbar extends Struct.ComponentSchema {
   collectionName: 'components_header_category_navbars';
   info: {
@@ -334,6 +350,7 @@ declare module '@strapi/strapi' {
       'footer.page': FooterPage;
       'footer.page-items': FooterPageItems;
       'footer.social-media': FooterSocialMedia;
+      'get-involved.involve-component': GetInvolvedInvolveComponent;
       'header.category-navbar': HeaderCategoryNavbar;
       'header.navbar': HeaderNavbar;
       'header.navbar-items': HeaderNavbarItems;
