@@ -155,6 +155,7 @@ export interface HeaderCategoryNavbar extends Struct.ComponentSchema {
       'api::category.category'
     >;
     title: Schema.Attribute.String;
+    titleCTA: Schema.Attribute.String;
   };
 }
 
