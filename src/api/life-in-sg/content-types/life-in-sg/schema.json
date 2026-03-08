@@ -24,8 +24,10 @@
     "categoriesTitle": {
       "type": "string"
     },
-    "articleTitle": {
-      "type": "string"
+    "article": {
+      "type": "component",
+      "component": "event.event-component",
+      "repeatable": false
     }
   }
 }

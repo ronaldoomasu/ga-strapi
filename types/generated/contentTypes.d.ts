@@ -971,7 +971,7 @@ export interface ApiLifeInSgLifeInSg extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    articleTitle: Schema.Attribute.String;
+    article: Schema.Attribute.Component<'event.event-component', false>;
     bannerAds: Schema.Attribute.Component<'shared.banner-ads', true>;
     categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;

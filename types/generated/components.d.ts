@@ -63,8 +63,9 @@ export interface EventEventComponent extends Struct.ComponentSchema {
     displayName: 'Event Component';
   };
   attributes: {
-    eventTitle: Schema.Attribute.String;
     readMoreText: Schema.Attribute.String;
+    seeMoreText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
