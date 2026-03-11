@@ -28,6 +28,16 @@
       "type": "component",
       "component": "event.event-component",
       "repeatable": false
+    },
+    "categories": {
+      "type": "component",
+      "component": "general.category",
+      "repeatable": false
+    },
+    "articles": {
+      "type": "component",
+      "component": "article.article-component",
+      "repeatable": false
     }
   }
 }

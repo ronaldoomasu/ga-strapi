@@ -18,12 +18,6 @@
     "description": {
       "type": "richtext"
     },
-    "detailBtnText": {
-      "type": "string"
-    },
-    "detailBtnCTA": {
-      "type": "string"
-    },
     "joinBtnText": {
       "type": "string"
     },

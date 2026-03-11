@@ -24,8 +24,10 @@
     "eventTitle": {
       "type": "string"
     },
-    "calendarTitle": {
-      "type": "string"
+    "upcomingEvents": {
+      "type": "component",
+      "component": "event.upcoming-event",
+      "repeatable": false
     }
   }
 }

@@ -31,6 +31,11 @@
       "component": "event.event-component",
       "repeatable": false
     },
+    "categories": {
+      "type": "component",
+      "component": "general.category",
+      "repeatable": false
+    },
     "categoriesTitle": {
       "type": "string"
     },

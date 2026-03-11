@@ -511,6 +511,7 @@ export interface ApiArticleDetailPageArticleDetailPage
     draftAndPublish: true;
   };
   attributes: {
+    backButton: Schema.Attribute.String;
     banner: Schema.Attribute.Component<'shared.banner', false>;
     bannerAds: Schema.Attribute.Component<'shared.banner-ads', true>;
     createdAt: Schema.Attribute.DateTime;
@@ -523,7 +524,10 @@ export interface ApiArticleDetailPageArticleDetailPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    searchPlaceholder: Schema.Attribute.String;
+    relatedArticles: Schema.Attribute.Component<
+      'article.related-article',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -541,6 +545,7 @@ export interface ApiArticlePageArticlePage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    allTopicOption: Schema.Attribute.String;
     articleTitle: Schema.Attribute.String;
     banner: Schema.Attribute.Component<'shared.banner', false>;
     createdAt: Schema.Attribute.DateTime;
@@ -573,12 +578,14 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
+    authorBy: Schema.Attribute.String;
     banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.String;
     description: Schema.Attribute.RichText;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -606,7 +613,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     singularName: 'author';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
@@ -667,7 +674,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     singularName: 'category';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
@@ -907,6 +914,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Component<'shared.banner', true>;
+    categories: Schema.Attribute.Component<'general.category', false>;
     categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -939,9 +947,11 @@ export interface ApiImpulsInsightImpulsInsight extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articles: Schema.Attribute.Component<'article.article-component', false>;
     articleTitle: Schema.Attribute.String;
     banner: Schema.Attribute.Component<'shared.banner', false>;
     bannerAds: Schema.Attribute.Component<'shared.banner-ads', true>;
+    categories: Schema.Attribute.Component<'general.category', false>;
     categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -972,7 +982,9 @@ export interface ApiLifeInSgLifeInSg extends Struct.SingleTypeSchema {
   };
   attributes: {
     article: Schema.Attribute.Component<'event.event-component', false>;
+    articles: Schema.Attribute.Component<'article.article-component', false>;
     bannerAds: Schema.Attribute.Component<'shared.banner-ads', true>;
+    categories: Schema.Attribute.Component<'general.category', false>;
     categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1007,6 +1019,7 @@ export interface ApiMembershipPageMembershipPage
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
+    joinMemberBtn: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1315,7 +1328,6 @@ export interface ApiUpcomingEventUpcomingEvent extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Component<'shared.banner', false>;
-    calendarTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1328,6 +1340,7 @@ export interface ApiUpcomingEventUpcomingEvent extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    upcomingEvents: Schema.Attribute.Component<'event.upcoming-event', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

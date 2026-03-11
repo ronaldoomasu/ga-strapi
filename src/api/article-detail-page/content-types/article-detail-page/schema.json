@@ -21,8 +21,13 @@
       "component": "shared.banner-ads",
       "repeatable": true
     },
-    "searchPlaceholder": {
+    "backButton": {
       "type": "string"
+    },
+    "relatedArticles": {
+      "type": "component",
+      "component": "article.related-article",
+      "repeatable": false
     }
   }
 }

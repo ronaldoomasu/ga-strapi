@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_event_event_components",
+  "collectionName": "components_article_related_articles",
   "info": {
-    "displayName": "Event Component"
+    "displayName": "Related Article"
   },
   "options": {},
   "attributes": {
@@ -9,9 +9,6 @@
       "type": "string"
     },
     "readMoreText": {
-      "type": "string"
-    },
-    "registerNowText": {
       "type": "string"
     }
   },

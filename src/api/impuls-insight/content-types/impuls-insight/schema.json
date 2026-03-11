@@ -31,6 +31,16 @@
     },
     "categoriesTitle": {
       "type": "string"
+    },
+    "categories": {
+      "type": "component",
+      "component": "general.category",
+      "repeatable": false
+    },
+    "articles": {
+      "type": "component",
+      "component": "article.article-component",
+      "repeatable": false
     }
   }
 }

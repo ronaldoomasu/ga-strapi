@@ -57,6 +57,30 @@ export interface AboutSection extends Struct.ComponentSchema {
   };
 }
 
+export interface ArticleArticleComponent extends Struct.ComponentSchema {
+  collectionName: 'components_article_article_components';
+  info: {
+    displayName: 'Article Component';
+  };
+  attributes: {
+    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
+    readMoreText: Schema.Attribute.String;
+    seeMoreText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ArticleRelatedArticle extends Struct.ComponentSchema {
+  collectionName: 'components_article_related_articles';
+  info: {
+    displayName: 'Related Article';
+  };
+  attributes: {
+    readMoreText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface EventEventComponent extends Struct.ComponentSchema {
   collectionName: 'components_event_event_components';
   info: {
@@ -64,7 +88,7 @@ export interface EventEventComponent extends Struct.ComponentSchema {
   };
   attributes: {
     readMoreText: Schema.Attribute.String;
-    seeMoreText: Schema.Attribute.String;
+    registerNowText: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -77,6 +101,17 @@ export interface EventHeroImages extends Struct.ComponentSchema {
   attributes: {
     image: Schema.Attribute.Media<'images'>;
     subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface EventUpcomingEvent extends Struct.ComponentSchema {
+  collectionName: 'components_event_upcoming_events';
+  info: {
+    displayName: 'Upcoming Event';
+  };
+  attributes: {
+    registerNowText: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -129,6 +164,20 @@ export interface FooterSocialMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralCategory extends Struct.ComponentSchema {
+  collectionName: 'components_general_categories';
+  info: {
+    displayName: 'Category';
+  };
+  attributes: {
+    categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface GetInvolvedInvolveComponent extends Struct.ComponentSchema {
   collectionName: 'components_get_involved_involve_components';
   info: {
@@ -136,8 +185,6 @@ export interface GetInvolvedInvolveComponent extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.RichText;
-    detailBtnCTA: Schema.Attribute.String;
-    detailBtnText: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     joinBtnCTA: Schema.Attribute.String;
     joinBtnText: Schema.Attribute.String;
@@ -346,12 +393,16 @@ declare module '@strapi/strapi' {
       'about.community': AboutCommunity;
       'about.community-detail': AboutCommunityDetail;
       'about.section': AboutSection;
+      'article.article-component': ArticleArticleComponent;
+      'article.related-article': ArticleRelatedArticle;
       'event.event-component': EventEventComponent;
       'event.hero-images': EventHeroImages;
+      'event.upcoming-event': EventUpcomingEvent;
       'footer.apps': FooterApps;
       'footer.page': FooterPage;
       'footer.page-items': FooterPageItems;
       'footer.social-media': FooterSocialMedia;
+      'general.category': GeneralCategory;
       'get-involved.involve-component': GetInvolvedInvolveComponent;
       'header.category-navbar': HeaderCategoryNavbar;
       'header.navbar': HeaderNavbar;

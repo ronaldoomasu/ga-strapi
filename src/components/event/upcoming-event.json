@@ -1,14 +1,11 @@
 {
-  "collectionName": "components_event_event_components",
+  "collectionName": "components_event_upcoming_events",
   "info": {
-    "displayName": "Event Component"
+    "displayName": "Upcoming Event"
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "readMoreText": {
       "type": "string"
     },
     "registerNowText": {

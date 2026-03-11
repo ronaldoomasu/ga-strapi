@@ -21,6 +21,9 @@
       "type": "component",
       "component": "shared.review",
       "repeatable": false
+    },
+    "joinMemberBtn": {
+      "type": "string"
     }
   }
 }

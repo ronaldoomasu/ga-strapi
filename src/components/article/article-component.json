@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_article_article_components",
+  "info": {
+    "displayName": "Article Component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "readMoreText": {
+      "type": "string"
+    },
+    "seeMoreText": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  },
+  "config": {}
+}

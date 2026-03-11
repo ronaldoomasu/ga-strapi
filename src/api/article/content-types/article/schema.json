@@ -61,6 +61,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::type.type"
+    },
+    "date": {
+      "type": "string"
+    },
+    "authorBy": {
+      "type": "string"
     }
   }
 }
