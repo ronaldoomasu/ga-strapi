@@ -17,10 +17,8 @@
     "subtitle": {
       "type": "string"
     },
-    "termsConditions": {
-      "type": "component",
-      "component": "shared.label-detail",
-      "repeatable": true
+    "terms": {
+      "type": "richtext"
     }
   }
 }

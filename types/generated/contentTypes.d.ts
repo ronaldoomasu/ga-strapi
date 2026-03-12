@@ -915,7 +915,6 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   attributes: {
     banner: Schema.Attribute.Component<'shared.banner', true>;
     categories: Schema.Attribute.Component<'general.category', false>;
-    categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -948,11 +947,9 @@ export interface ApiImpulsInsightImpulsInsight extends Struct.SingleTypeSchema {
   };
   attributes: {
     articles: Schema.Attribute.Component<'article.article-component', false>;
-    articleTitle: Schema.Attribute.String;
     banner: Schema.Attribute.Component<'shared.banner', false>;
     bannerAds: Schema.Attribute.Component<'shared.banner-ads', true>;
     categories: Schema.Attribute.Component<'general.category', false>;
-    categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -981,11 +978,9 @@ export interface ApiLifeInSgLifeInSg extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    article: Schema.Attribute.Component<'event.event-component', false>;
     articles: Schema.Attribute.Component<'article.article-component', false>;
     bannerAds: Schema.Attribute.Component<'shared.banner-ads', true>;
     categories: Schema.Attribute.Component<'general.category', false>;
-    categoriesTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1157,7 +1152,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
       'api::privacy-policy.privacy-policy'
     > &
       Schema.Attribute.Private;
-    privacyPolicies: Schema.Attribute.Component<'shared.label-detail', true>;
+    policies: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -1249,7 +1244,7 @@ export interface ApiTermConditionTermCondition extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     subtitle: Schema.Attribute.String;
-    termsConditions: Schema.Attribute.Component<'shared.label-detail', true>;
+    terms: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1331,7 +1326,6 @@ export interface ApiUpcomingEventUpcomingEvent extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    eventTitle: Schema.Attribute.String;
     heroImages: Schema.Attribute.Component<'event.hero-images', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

@@ -17,10 +17,8 @@
     "subtitle": {
       "type": "string"
     },
-    "privacyPolicies": {
-      "type": "component",
-      "component": "shared.label-detail",
-      "repeatable": true
+    "policies": {
+      "type": "richtext"
     }
   }
 }

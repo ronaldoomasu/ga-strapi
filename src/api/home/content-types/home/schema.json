@@ -36,9 +36,6 @@
       "component": "general.category",
       "repeatable": false
     },
-    "categoriesTitle": {
-      "type": "string"
-    },
     "secondSection": {
       "type": "component",
       "component": "home.section",

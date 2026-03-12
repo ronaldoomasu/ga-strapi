@@ -21,9 +21,6 @@
       "component": "shared.banner",
       "repeatable": false
     },
-    "eventTitle": {
-      "type": "string"
-    },
     "upcomingEvents": {
       "type": "component",
       "component": "event.upcoming-event",

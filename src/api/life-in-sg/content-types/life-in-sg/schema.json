@@ -21,14 +21,6 @@
       "component": "shared.banner-ads",
       "repeatable": true
     },
-    "categoriesTitle": {
-      "type": "string"
-    },
-    "article": {
-      "type": "component",
-      "component": "event.event-component",
-      "repeatable": false
-    },
     "categories": {
       "type": "component",
       "component": "general.category",
