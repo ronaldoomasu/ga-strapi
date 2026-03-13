@@ -24,6 +24,9 @@
     },
     "allTopicOption": {
       "type": "string"
+    },
+    "readMoreText": {
+      "type": "string"
     }
   }
 }

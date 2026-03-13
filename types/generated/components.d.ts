@@ -185,6 +185,8 @@ export interface GetInvolvedInvolveComponent extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.RichText;
+    detailBtnCTA: Schema.Attribute.String;
+    detailBtnText: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     joinBtnCTA: Schema.Attribute.String;
     joinBtnText: Schema.Attribute.String;
